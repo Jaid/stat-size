@@ -1,3 +1,5 @@
+import fs from "fs/promises"
+
 /** @module stat-size */
 
 /**
@@ -5,6 +7,14 @@
  * @param {Buffer} buffer
  * @return {Promise<string>}
  */
-export default (mimeType, buffer) => {
-  return `data:${mimeType};base64,${buffer.toString("base64")}`
+export default async file => {
+  try {
+    const stat = await fs.stat(file)
+    return stat.size
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return null
+    }
+    throw error
+  }
 }
