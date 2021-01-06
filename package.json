@@ -38,16 +38,17 @@
   },
   "homepage": "https://github.com/Jaid/stat-size",
   "keywords": [
-    "base-64",
-    "base64",
-    "buffer",
-    "data-url",
-    "data-urls",
-    "lib",
-    "library",
-    "mimetype",
-    "node-buffer",
-    "util",
-    "utility"
+    "bytes",
+    "directory",
+    "disk",
+    "file",
+    "folder",
+    "fs",
+    "node",
+    "node-js",
+    "promise",
+    "size",
+    "utility",
+    "volume"
   ]
 }
