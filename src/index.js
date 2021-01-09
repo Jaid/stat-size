@@ -3,9 +3,8 @@ import fs from "fs/promises"
 /** @module stat-size */
 
 /**
- * @param {string} mimeType
- * @param {Buffer} buffer
- * @return {Promise<string>}
+ * @param {string} file
+ * @return {Promise<number>} Size of file contents in bytes
  */
 export default async file => {
   try {
